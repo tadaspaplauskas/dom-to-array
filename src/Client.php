@@ -4,13 +4,13 @@ namespace DOMToArray;
 
 use Goutte\Client as GoutteClient;
 
-class Client extends BaseClient
+class Client
 {
     protected $url;
 
     public function __construct($url)
     {
-        if (!filter_var($source, FILTER_VALIDATE_URL)) {
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
             throw new \InvalidArgumentException('Invalid URL');
         }
 
@@ -55,7 +55,7 @@ class Client extends BaseClient
                     'tag' => $node->tagName,
                     'attributes' => $attributes,
                     'text' => trim($node->textContent),
-                    'children' => $this->arrayTree($node->childNodes)
+                    'children' => $this->buildTree($node->childNodes)
                 ];
             }
         }
