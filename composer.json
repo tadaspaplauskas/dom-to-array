@@ -1,0 +1,24 @@
+{
+    "name": "tadaspaplauskas/dom-to-array",
+    "description": "Converts DOM to array tree structure",
+    "homepage": "https://github.com/tadaspaplauskas/dom-to-array",
+    "type": "composer-plugin",
+    "require": {
+        "php": ">=5.5.0",
+        "fabpot/goutte": "~3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tadas",
+            "email": "tadas@paplauskas.lt"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "DOMToArray\\": "src" },
+        "exclude-from-classmap": ["DOMToArray/Tests"]
+    },
+}
