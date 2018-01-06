@@ -21,8 +21,8 @@ class Client
     {
         $nodes = $this->nodes();
 
-        return $this->buildTree($nodes);
-
+        // we expect only one element to be at the top
+        return reset($this->buildTree($nodes));
     }
 
     public function json($jsonFlag = JSON_PRETTY_PRINT)
