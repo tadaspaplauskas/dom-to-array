@@ -17,6 +17,6 @@
         "phpunit/phpunit": "~6.0"
     },
     "autoload": {
-        "psr-4": { "DOMToArray\\": "src" }
+        "psr-4": { "DomToArray\\": "src" }
     }
 }

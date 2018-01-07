@@ -14,7 +14,7 @@ Do not forget to require autoload file if your framework doesn't do that for you
 
 require 
 
-use DOMToArray\Client;
+use DomToArray\Client;
 
 $client = new Client('http://info.cern.ch');
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace DOMToArray;
+namespace DomToArray;
 
 use Goutte\Client as GoutteClient;
 
