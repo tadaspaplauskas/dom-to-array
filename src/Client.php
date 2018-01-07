@@ -27,7 +27,7 @@ class Client
         return isset($tree[0]) ? $tree[0] : null;
     }
 
-    public function json($jsonFlag = JSON_PRETTY_PRINT)
+    public function json($jsonFlag = 0)
     {
         return json_encode($this->array(), $jsonFlag);
     }
