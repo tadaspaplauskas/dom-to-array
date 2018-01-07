@@ -21,8 +21,10 @@ class Client
     {
         $nodes = $this->nodes();
 
+        $tree = $this->buildTree($nodes);
+        
         // we expect only one element to be at the top
-        return reset($this->buildTree($nodes));
+        return isset($tree[0]) ? $tree[0] : null;
     }
 
     public function json($jsonFlag = JSON_PRETTY_PRINT)
@@ -45,8 +47,8 @@ class Client
 
         foreach ($nodes as $node) {
             if ($node instanceof \DOMElement) {
-
                 $attributes = [];
+
                 foreach ($node->attributes as $attribute) {
                     $attributes[$attribute->name] = $attribute->value;
                 }
